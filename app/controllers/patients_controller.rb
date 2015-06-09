@@ -17,7 +17,7 @@ class PatientsController < ApplicationController
 		@patient = current_user.patients.build(patient_params)
 
 		if @patient.save
-			redirect_to @patient, notice: "Successfull created new Patient"
+			redirect_to @patient, notice: "Successfully created new Patient"
 		else
 			render 'new'
 		end
@@ -44,7 +44,7 @@ class PatientsController < ApplicationController
 	private
 
 	def patient_params
-		params.require(:patient).permit(:name, :insurance, :age)
+		params.require(:patient).permit(:name, :insurance, :age, :document, :image)
 	end   
 
 	def find_patient

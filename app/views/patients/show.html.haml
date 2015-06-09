@@ -1,3 +1,6 @@
+= image_tag @patient.image.url(:medium)
+%br/
+= link_to 'Document', @patient.document.url
 %h1= @patient.name
 %p= @patient.insurance
 %p= @patient.age
