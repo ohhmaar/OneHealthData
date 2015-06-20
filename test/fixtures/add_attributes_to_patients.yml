@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  height: MyString
+  weight: MyString
+  bmi: MyString
+  body_fat: MyString
+  waist_circumference: MyString
+  history: MyText
+  notes: MyText
+
+two:
+  height: MyString
+  weight: MyString
+  bmi: MyString
+  body_fat: MyString
+  waist_circumference: MyString
+  history: MyText
+  notes: MyText
