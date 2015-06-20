@@ -8,37 +8,59 @@
 				- @patient.errors.full_messages.each do |msg|
 					%li= msg
 
-	.form-group
-		= f.input :document, input_html: { class: 'form-control' }
 
-	.form-group
-		= f.input :image, input_html: { class: 'form-control' }
 
-	.form-group
-		= f.input :name, input_html: { class: 'form-control' }
+	.container
+		.row
+			.col-md-3
+				%h5= "Name"
+			.col-md-9
+				.col-md-3
+					.form-group
+						= f.input :name, label: "Name", input_html: { class: 'form-group' }
+				.col-md-3
+					.form-group
+						= f.input :age, label: "Age", input_html: { class: 'form-group' }	
+		.row
+			.col-md-3
+				%h5= "Height & Weight"
+			.col-md-9
+				.col-md-3
+					.form-group
+						= f.input :height, placeholder: "Height", input_html: { class: 'form-group' }
+				.col-md-3
+					.form-group
+						= f.input :weight, placeholder: "Weight", input_html: { class: 'form-group' }
+		.row
+			.col-md-3
+				%h5= "Metrics" 
+			.col-md-3
+				.form-group
+					= f.input :bmi, placeholder: "BMI", input_html: { class: 'form-group' }
+			.col-md-3
+				.form-group
+					= f.input :body_fat, placeholder: "Body Fat", input_html: { class: 'form-group' }
+			.col-md-3
+				.form-group
+					= f.input :waist_circumference, placeholder: "Waist Circumference", input_html: { class: 'form-group' }
+		.row
+			.col-md-3
+				= f.input :document, label: "Document", input_html: { class: 'form-group' }
+				%p.help-block= "Upload any medical records"
 
-	.form-group
-		= f.input :insurance, input_html: { class: 'form-control' }
 
-	.form-group
-		= f.input :age, input_html: { class: 'form-control' }
 
-	.form-group
-		= f.input :address, input_html: { class: 'form-control' }
+		.row
+			.col-md-6
+				.form-group
+					= f.input :history, label: "Medical History", placeholder: "Medical History", input_html: { class: 'form-group' }	
+			.col-md-6
+				.form-group
+					= f.input :notes, placeholder: "Doctor Notes", input_html: { class: 'form-group' }
 
-	.form-group
-		= f.input :height, input_html: { class: 'form-control' }
-	.form-group
-		= f.input :weight, input_html: { class: 'form-control' }
-	.form-group
-		= f.input :bmi, input_html: { class: 'form-control' }
-	.form-group
-		= f.input :body_fat, input_html: { class: 'form-control' }
-	.form-group
-		= f.input :waist_circumference, input_html: { class: 'form-control' }
-	.form-group
-		= f.input :history, input_html: { class: 'form-control' }
-	.form-group
-		= f.input :notes, input_html: { class: 'form-control' }
+		.row
+			.col-md-6
+				.form-group
+					= f.button :submit, class: "btn btn-primary"
 
-	= f.button :submit, class: "btn btn-primary"
+
