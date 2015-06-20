@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150609200656) do
+ActiveRecord::Schema.define(version: 20150620174528) do
 
   create_table "patients", force: :cascade do |t|
     t.string   "name"
@@ -28,6 +28,14 @@ ActiveRecord::Schema.define(version: 20150609200656) do
     t.string   "document_content_type"
     t.integer  "document_file_size"
     t.datetime "document_updated_at"
+    t.string   "address"
+    t.string   "height"
+    t.string   "weight"
+    t.string   "bmi"
+    t.string   "body_fat"
+    t.string   "waist_circumference"
+    t.text     "history"
+    t.text     "notes"
   end
 
   add_index "patients", ["user_id"], name: "index_patients_on_user_id"
@@ -45,6 +53,7 @@ ActiveRecord::Schema.define(version: 20150609200656) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "address"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
